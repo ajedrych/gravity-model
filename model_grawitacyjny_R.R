@@ -37,13 +37,16 @@ summary(model4)
 # tablica w stylu publikacyjnym
 # Quality Publication Table
 library("stargazer")
+stargazer(model1,model2, model3, model4, type= "text", title = "Estymowane modele: podsumowanie", out="model1.txt")
+stargazer(model1, model2, model3, model4, type="html", 
+          align=TRUE, style="default", df=FALSE)
 stargazer(model1, model2, model3, model4, type="text", 
           align=TRUE, style="default", df=FALSE)
 
-stargazer(model1, model2, model3, model4, model5, type="text", 
+stargazer(model1,  type="text", 
           align=TRUE, style="default", df=TRUE)
 
-stargazer(model1, model2, model3, model4, model5, type="text", 
+stargazer(model1, type="text", 
           align=TRUE, style="default", df=FALSE, star.cutoffs =c(0.05, 0.01, 0.001))
 
 #test reset
